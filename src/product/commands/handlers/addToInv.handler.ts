@@ -1,5 +1,5 @@
 import { CommandHandler, EventPublisher, ICommandHandler } from '@nestjs/cqrs';
-import { AddToInvCommand } from '../impl/addToInv.command';
+import { AddToInvCommand } from '../impl';
 import { ProductRepository } from '../../repository/product.repository';
 
 @CommandHandler(AddToInvCommand)

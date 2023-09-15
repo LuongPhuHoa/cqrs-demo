@@ -1,5 +1,5 @@
 import { EventsHandler, IEventHandler } from '@nestjs/cqrs';
-import { AddToInvEvent } from '../impl/addToInvEvent.event';
+import { AddToInvEvent } from '../impl';
 
 @EventsHandler(AddToInvEvent)
 export class AddToInvEventHandler implements IEventHandler<AddToInvEvent> {
