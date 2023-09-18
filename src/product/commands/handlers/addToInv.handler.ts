@@ -10,13 +10,13 @@ export class AddToInvHandler implements ICommandHandler<AddToInvCommand> {
   ) {}
 
   async execute(command: AddToInvCommand) {
-    const { productId, userId, quantity, inventoryId } = command;
+    const { productId, userId, quantity } = command;
     const product = this.publisher.mergeObjectContext(
       await this.repository.findOne(productId),
     );
-    product.addToInv(userId, productId, quantity, inventoryId);
+    product.addToInv(userId, productId, quantity);
     console.log(
-      `Product ${productId} added to inventory ${inventoryId} by user ${userId} with ${quantity} quantity`,
+      `Product ${productId} added to inventory by user ${userId} with ${quantity} quantity`,
     );
     product.commit();
   }

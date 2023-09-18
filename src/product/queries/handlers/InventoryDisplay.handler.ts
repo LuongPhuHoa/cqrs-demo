@@ -6,10 +6,9 @@ import { ProductRepository } from 'src/product/repository/product.repository';
 export class InventoryDisplayHandler
   implements IQueryHandler<InventoryDisplayQuery>
 {
-  constructor(private readonly productRepository: ProductRepository) {}
+  constructor(private readonly repository: ProductRepository) {}
 
-  async execute() {
-    console.log('InventoryDisplayHandler.execute()');
-    return this.productRepository.findAll();
+  async execute(query: InventoryDisplayQuery) {
+    return this.repository.findAll();
   }
 }

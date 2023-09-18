@@ -14,21 +14,21 @@ export class ProductController {
   ) {}
 
   @Post('add')
-  async addProduct(@Body() body: any): Promise<any> {
+  async addProduct(@Body() body: any) {
     const { productId } = body;
     return this.commandBus.execute(new AddProductCommand(productId));
   }
 
   @Post('add-to-inv')
-  async addToInv(@Body() body: any): Promise<any> {
-    const { productId, userId, quantity, inventoryId } = body;
+  async addToInv(@Body() body: any) {
+    const { productId, userId, quantity } = body;
     return this.commandBus.execute(
-      new AddToInvCommand(productId, userId, quantity, inventoryId),
+      new AddToInvCommand(productId, userId, quantity),
     );
   }
 
   @Post('rate')
-  async rateProduct(@Body() body: any): Promise<any> {
+  async rateProduct(@Body() body: any) {
     const { productId, userId, rating } = body;
     return this.commandBus.execute(
       new RateProductCommand(productId, userId, rating),

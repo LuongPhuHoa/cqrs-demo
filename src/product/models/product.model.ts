@@ -16,13 +16,8 @@ export class Product extends AggregateRoot {
     this.apply(new AddProductEvent(productId));
   }
 
-  public addToInv(
-    userId: number,
-    productID: number,
-    quantity: number,
-    inventoryId: number,
-  ) {
-    this.apply(new AddToInvEvent(userId, productID, quantity, inventoryId));
+  public addToInv(userId: number, productID: number, quantity: number) {
+    this.apply(new AddToInvEvent(userId, productID, quantity));
   }
 
   public rate(userId: number, productId: number, rating: number) {
