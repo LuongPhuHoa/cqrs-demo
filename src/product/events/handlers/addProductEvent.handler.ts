@@ -4,6 +4,6 @@ import { AddProductEvent } from '../impl';
 @EventsHandler(AddProductEvent)
 export class AddProductEventHandler implements IEventHandler<AddProductEvent> {
   handle(event: AddProductEvent) {
-    console.log('AddProductEvent', event);
+    console.log(event);
   }
 }

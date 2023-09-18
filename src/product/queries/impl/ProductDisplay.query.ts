@@ -1,1 +1,3 @@
-export class ProductDisplayQuery {}
+export class ProductDisplayQuery {
+  constructor(public readonly id: number) {}
+}

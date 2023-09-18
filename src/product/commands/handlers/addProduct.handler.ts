@@ -14,8 +14,8 @@ export class AddProductHandler implements ICommandHandler<AddProductCommand> {
     const product = this.publisher.mergeObjectContext(
       await this.repository.create(productId),
     );
-    product.addProduct(productId);
     console.log(`Product ${productId} added`);
+    product.addProduct(productId);
     product.commit();
   }
 }

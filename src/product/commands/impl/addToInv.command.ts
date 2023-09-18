@@ -3,5 +3,6 @@ export class AddToInvCommand {
     public readonly userId: number,
     public readonly productId: number,
     public readonly quantity: number,
+    public readonly inventoryId: number,
   ) {}
 }

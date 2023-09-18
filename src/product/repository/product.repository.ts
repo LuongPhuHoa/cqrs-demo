@@ -12,7 +12,7 @@ export class ProductRepository {
   }
 
   async findOne(id: number): Promise<Product> {
-    return this.Products.find((Product) => Product.id === id);
+    return this.Products.find((Product) => Product.id == id);
   }
 
   async findAll(): Promise<Product[]> {
