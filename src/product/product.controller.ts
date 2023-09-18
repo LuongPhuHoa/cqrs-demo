@@ -3,7 +3,7 @@ import { CommandBus, QueryBus } from '@nestjs/cqrs';
 import { AddProductCommand } from './commands/impl/addProduct.command';
 import { AddToInvCommand } from './commands/impl/addToInv.command';
 import { RateProductCommand } from './commands/impl/rateProduct.command';
-import { InventoryDisplayQuery } from './queries/impl/inventoryDisplay.query';
+import { InventoryDisplayQuery } from './queries/impl/InventoryDisplay.query';
 import { ProductDisplayQuery } from './queries/impl/ProductDisplay.query';
 
 @Controller()
