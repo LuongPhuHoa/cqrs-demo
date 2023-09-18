@@ -9,6 +9,7 @@ export class InventoryDisplayHandler
   constructor(private readonly repository: ProductRepository) {}
 
   async execute(query: InventoryDisplayQuery) {
+    console.log(query);
     return this.repository.findAll();
   }
 }
